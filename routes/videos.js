@@ -18,6 +18,7 @@ const videos = (
     ))
 )
 
+//#region videos
 // Send the videos to the frontend
 router.get('/', (_, res) => {
     res.send(videos);
@@ -29,6 +30,28 @@ router.get('/:videoId', (req, res) => {
     res.send(video);
 });
 
+// Upload a new video
+router.post('/', (req, res) => {
+    const newVideo = {
+        id: uuid(),
+        title: req.body.title,
+        channel: 'Kevin',
+        image: 'http://localhost:8080/images/image0.jpeg',
+        description: req.body.description,
+        views: 0,
+        likes: 0,
+        duration: '4:01',
+        timestamp: new Date().getTime(),
+        comments: []
+    }
+
+    videoDetails.push(newVideo);
+    fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 2));
+    res.send(videoDetails);
+});
+//#endregion
+
+//#region comments
 // Make a new comment
 router.post('/:videoId/comments', (req, res) => {
     const video = videoDetails.find(video => video.id === req.params.videoId);
@@ -42,7 +65,7 @@ router.post('/:videoId/comments', (req, res) => {
     };
 
     video.comments.push(newComment);
-    fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 4));
+    fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 2));
     res.send(video.comments);
 }); 
 
@@ -61,9 +84,10 @@ router.delete('/:videoId/comments/:commentId', (req, res) => {
     video.comments = video.comments.filter(
         ({id: commentId}) => commentId !== comment.id
     );
-    fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 4));
+    fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 2));
     console.log(`${comment} deleted`);
     res.send(`${comment} deleted`);
 })
+//#endregion
 
 module.exports = router;
