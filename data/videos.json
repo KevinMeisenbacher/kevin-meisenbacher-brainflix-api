@@ -38,6 +38,13 @@
         "comment": "asdf",
         "likes": 0,
         "timestamp": 1714251456576
+      },
+      {
+        "id": "046b2e62-74ee-433c-84b8-23b66819637f",
+        "name": "Kevin",
+        "comment": "asdf",
+        "likes": 0,
+        "timestamp": 1714328196950
       }
     ]
   },
@@ -306,101 +313,5 @@
         "timestamp": 1632496261000
       }
     ]
-  },
-  {
-    "id": "44b69b33-b160-4ebb-ba5b-b0432a5ab317",
-    "title": "asdf",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "qwer",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251595526,
-    "comments": null
-  },
-  {
-    "id": "2e7dbeba-7aaa-4efa-8b2e-ec42f4838d78",
-    "title": "test",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "asdf",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251704751,
-    "comments": []
-  },
-  {
-    "id": "f7ea1809-c2ce-4c8e-beba-88e82eb77ac9",
-    "title": "test2",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "asdf",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251739949,
-    "comments": []
-  },
-  {
-    "id": "43feef72-4406-4c50-9c49-29ef278f2c31",
-    "title": "test3",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "asdf",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251770050,
-    "comments": []
-  },
-  {
-    "id": "a5f102da-e704-482e-911a-863abd98617c",
-    "title": "test3",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "asdf",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251791752,
-    "comments": []
-  },
-  {
-    "id": "f6852ed3-dd3d-4fb2-8949-993131e0b6cc",
-    "title": "test4",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "asdf",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251827077,
-    "comments": []
-  },
-  {
-    "id": "6c1ff0e0-a13d-4968-a0b0-d09e87eef8eb",
-    "title": "awr ascfasd",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "f asta wert",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714251975652,
-    "comments": []
-  },
-  {
-    "id": "95b84b8c-f25e-40be-8b68-e203f35f5653",
-    "title": "erra wr qwafa",
-    "channel": "Kevin",
-    "image": "http://localhost:8080/images/image0.jpeg",
-    "description": "sdf qwerf ",
-    "views": 0,
-    "likes": 0,
-    "duration": "4:01",
-    "timestamp": 1714252005304,
-    "comments": []
   }
 ]

@@ -4,19 +4,25 @@ const fs = require('fs');
 const {v4: uuid} = require('uuid');
 
 // Videos with all details you want on the video page
-const videoDetails = require('../data/videos.json');
+const videoDetails = JSON.parse(fs.readFileSync('./data/videos.json'));
 
 // Videos with just the main bits for the video list and stuff
-const videos = (
-    videoDetails.map(video => (
-    {
-        "id": video.id,
-        "title": video.title,
-        "channel": video.channel,
-        "image": video.image
-    }
-    ))
-)
+function updateVideoList(videoDetails) {
+    const videos = (
+        videoDetails.map(video => (
+        {
+            "id": video.id,
+            "title": video.title,
+            "channel": video.channel,
+            "image": video.image
+        }
+        ))
+    );
+    return videos;
+}
+
+// Initialize the video list
+let videos = updateVideoList(videoDetails);
 
 //#region videos
 // Send the videos to the frontend
@@ -44,9 +50,9 @@ router.post('/', (req, res) => {
         timestamp: new Date().getTime(),
         comments: []
     }
-
     videoDetails.push(newVideo);
     fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 2));
+    videos = updateVideoList(videoDetails);
     res.send(videoDetails);
 });
 //#endregion
@@ -68,14 +74,6 @@ router.post('/:videoId/comments', (req, res) => {
     fs.writeFileSync('./data/videos.json', JSON.stringify(videoDetails, null, 2));
     res.send(video.comments);
 }); 
-
-// Send a video's comments to the frontend
-router.get('/:videoId/comments/:commentId', (req, res) => {
-    const video = videoDetails.find(video => video.id === req.params.videoId);
-    const comment = video.comments.find(comment => comment.id === req.params.commentId);
-    console.log(comment);
-    res.send(comment);
-})
 
 // Unexist a comment forever
 router.delete('/:videoId/comments/:commentId', (req, res) => {
