@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
         id: uuid(),
         title: req.body.title,
         channel: 'Kevin',
-        image: 'http://localhost:8080/images/image0.jpeg',
+        image: 'http://localhost:8080/images/image1.jpeg',
         description: req.body.description,
         views: 0,
         likes: 0,

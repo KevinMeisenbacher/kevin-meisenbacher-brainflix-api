@@ -31,20 +31,6 @@
         "comment": "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
         "likes": 0,
         "timestamp": 1626011132000
-      },
-      {
-        "id": "1771881b-2134-45d8-90aa-ce91328cf0b9",
-        "name": "Kevin",
-        "comment": "asdf",
-        "likes": 0,
-        "timestamp": 1714251456576
-      },
-      {
-        "id": "046b2e62-74ee-433c-84b8-23b66819637f",
-        "name": "Kevin",
-        "comment": "asdf",
-        "likes": 0,
-        "timestamp": 1714328196950
       }
     ]
   },
@@ -80,6 +66,13 @@
         "comment": "Who ever knew travel could be so easy? Looking forward to getting to put this into practice when I fly away in the near future. Wish me good luck!",
         "likes": 0,
         "timestamp": 1625177192000
+      },
+      {
+        "id": "5388e1df-c774-4d16-a4c4-8d63433a6c4f",
+        "name": "Kevin",
+        "comment": "asdf",
+        "likes": 0,
+        "timestamp": 1714853082072
       }
     ]
   },
