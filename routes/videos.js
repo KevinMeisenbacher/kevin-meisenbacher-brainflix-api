@@ -11,10 +11,10 @@ function updateVideoList(videoDetails) {
     const videos = (
         videoDetails.map(video => (
         {
-            "id": video.id,
-            "title": video.title,
-            "channel": video.channel,
-            "image": video.image
+            'id': video.id,
+            'title': video.title,
+            'channel': video.channel,
+            'image': video.image
         }
         ))
     );
@@ -27,6 +27,9 @@ let videos = updateVideoList(videoDetails);
 //#region videos
 // Send the videos to the frontend
 router.get('/', (_, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.type('application/json');
     res.send(videos);
 });
 
@@ -43,6 +46,7 @@ router.post('/', (req, res) => {
         title: req.body.title,
         channel: 'Kevin',
         image: 'http://localhost:8080/images/image0.jpeg',
+        src: 'http://localhost:8080/images/sample.mp4',
         description: req.body.description,
         views: 0,
         likes: 0,
